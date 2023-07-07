@@ -1,0 +1,5 @@
+<ng-container *ngIf="control && control.errors && (control.dirty ||control.touched)" >
+    <p *ngIf="control.getError('required')" class="red">Ce champs est requis</p>
+    <p *ngIf="control.getError('fileExtensionError')" class="red">Extension ivalide ({{ control.getError('fileExtensionError').ext }})</p>
+    <p *ngIf="control.getError('maxlength')" class="red">Ce champs est trop long (max: {{ control.getError('maxlength').requiredLength }})</p>
+</ng-container>

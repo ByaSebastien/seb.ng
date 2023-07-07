@@ -1,0 +1,24 @@
+<nb-layout>
+
+  <nb-layout-header fixed>
+    <div class="header-content">
+      <div class="left">Coucou</div>
+      <div class="right">
+        <nb-icon *ngIf="!logged" icon="log-in-outline" routerLink="/auth/login"></nb-icon>
+        <nb-icon *ngIf="logged" icon="power-outline" (click)="logout()"></nb-icon>
+      </div>
+    </div>
+  </nb-layout-header>
+
+  <nb-sidebar>
+    <nb-menu [items]="items"></nb-menu>
+  </nb-sidebar>
+
+  <nb-layout-column>
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+
+  <nb-layout-footer fixed>
+  </nb-layout-footer>
+
+</nb-layout>

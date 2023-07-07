@@ -1,0 +1,7 @@
+<nb-list>
+    <nb-list-item *ngFor="let book of books$|async">
+        <img [src]="book.image | imageServer">
+
+        {{ book.title }}
+    </nb-list-item>
+</nb-list>

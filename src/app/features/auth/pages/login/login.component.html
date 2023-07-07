@@ -1,0 +1,13 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="input-group">
+        <input type="text" nbInput placeholder="Username" formControlName="username">
+        <app-form-errors [control]="form.get('username')"></app-form-errors>
+    </div>
+    <div class="input-group">
+        <input type="password" nbInput placeholder="Password" formControlName="password">
+        <app-form-errors [control]="form.get('password')"></app-form-errors>
+    </div>
+    <div class="input-group">
+        <button nbButton status="info">Se connecter</button>
+    </div>
+</form>
